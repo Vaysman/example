@@ -1,0 +1,15 @@
+import org.gradle.api.artifacts.*
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: "application"
+
+
+
+def mainclass = "ua.andxbes.Example"
+mainClassName = mainclass
+sourceCompatibility = '1.8'
+
+
+task wrapper(type: Wrapper, description: 'Creates and deploys the Gradle wrapper to the current directory.') {
+    gradleVersion = '2.1'
+}
